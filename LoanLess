@@ -1,0 +1,9 @@
+import java.util.Scanner;
+class Untitled {
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		System.out.println("Welcome to Loan Less!"); 
+		System.out.println("Enter your weekly budget$");
+		double budget =input.nextDouble();
+	}
+}
