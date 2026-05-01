@@ -8,7 +8,7 @@ class Untitled {
 		System.out.println("Enter your weekly expenses$");
 		double expenses = input.nextDouble(); 
 		if (budget<0) { 
-			
+			System.out.print("Enter an input greater than or equal to zero"); 
 		}
 	}
 }
