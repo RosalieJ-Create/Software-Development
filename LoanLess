@@ -5,5 +5,10 @@ class Untitled {
 		System.out.println("Welcome to Loan Less!"); 
 		System.out.println("Enter your weekly budget$");
 		double budget =input.nextDouble();
+		System.out.println("Enter your weekly expenses$");
+		double expenses = input.nextDouble(); 
+		if (budget<0) { 
+			
+		}
 	}
 }
