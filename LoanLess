@@ -1,14 +1,51 @@
 import java.util.Scanner;
-class Untitled {
-	public static void main(String[] args) {
-		Scanner input = new Scanner(System.in);
-		System.out.println("Welcome to Loan Less!"); 
-		System.out.println("Enter your weekly budget$");
-		double budget =input.nextDouble();
-		System.out.println("Enter your weekly expenses$");
-		double expenses = input.nextDouble(); 
-		if (budget<0) { 
-			System.out.print("Enter an input greater than or equal to zero"); 
-		}
-	}
+class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Welcome to Loan Less!");
+        System.out.println("Enter your weekly budget$");
+        double budget = input.nextDouble();
+        String[] transactionName = new String[100];
+        double[] transactionAmount = new double[100];
+        int transactionCount = 0;
+
+        if (budget < 0) {
+            System.out.print("Enter an input greater than or equal to zero");
+        } else {
+            System.out.println("Enter your weekly expenses$");
+            double expenses = input.nextDouble();
+            System.out.println("Budget set to: $ " + budget);
+            System.out.println("Expenses set to: $ " + expenses);
+            int choice = 0;
+
+            while (choice != 4) {
+                System.out.println("\n--- Loan Less Menu ---");
+                System.out.println("1. Add a transaction ");
+                System.out.println("2. View a transaction");
+                System.out.println("3. Check remaining budget");
+                System.out.println("4. Quit");
+                System.out.print("Choose an option: ");
+                choice = input.nextInt();
+                if (choice == 1) {
+                    System.out.print("Enter transaction name: ");
+                    String name = input.next();
+                    System.out.print("Enter transaction amount: ");
+                    Double amount = input.nextDouble();
+                    transactionName[transactionCount] = name;
+                    transactionAmount[transactionCount] = amount;
+                    transactionCount++;
+                    System.out.println("Transaction added!");
+                } else if (choice == 2) {
+                    System.out.println("View transactions soon!");
+                } else if (choice == 3) {
+                    System.out.println("View remaining budget soon!");
+                } else if (choice != 4) {
+                    System.out.println("Please enter a valid input 1-4.");
+
+                }
+
+            }
+            System.out.println("Thanks for choosing Loan Less! Stay financially lit!");
+        }
+    }
 }
